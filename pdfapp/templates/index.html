@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PDF Viewer</title>
+</head>
+<body>
+    <h1>Uploaded PDFs</h1>
+    {% for pdf in pdfs %}
+        <h3>{{ pdf.name }}</h3>
+        <p>PDF URL: <a href="{{ pdf.file.url }}" target="_blank">{{ pdf.name }}</a></p>
+        
+    {% endfor %}
+</body>
+</html>
